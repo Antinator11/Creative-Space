@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block Signup %}
+<div class="card" style="width: auto; margin-left: auto; margin-right: auto; vertical-align: middle; margin-top: 15px">
+  <h1 class="card-title" style="border-bottom-style: solid; border-bottom-color: lightgray; border-radius: 6px; vertical-align: middle">Register</h1>
+  <div class="card-body">
+     <form action="http://127.0.0.1:5000/sign" method="post">
+    <label for="staticEmail" class="col-sm-2 col-form-label">Admin Key</label>
+     <input type="text" class="form-control" id="staticEmail" placeholder="Enter Key" name="Key">
+     <p style="margin-left: 20px">Don't have a Key? If you are the owner of the website please contact the developer for one.</p>
+               <label for="staticEmail" class="col-sm-2 col-form-label" style="margin-bottom: 10px">Enter Username</label>
+           <input type="text" class="form-control" id="staticEmail" placeholder="Enter Username"  name="Username">
+               <label for="inputPassword" class="col-sm-2 col-form-label" style="margin-bottom: 10px">Enter Password</label>
+         <input type="password" class="form-control" id="inputPassword" placeholder="Enter Password" name="Password">
+      <label for="inputPassword" class="col-sm-2 col-form-label" style="padding-right: 20px">Confirm Password</label>
+         <input type="password" class="form-control" id="inputPassword" placeholder="Confirm Password" name="ConfirmPassword">
+    <button formaction="{{ url_for('Home') }}" type="button" class="btn btn-secondary" data-dismiss="modal" style="margin-top: 33px; margin-left: 10px; padding-right: 450px; padding-left: 425px">Back</button>
+        <button type="submit" class="btn btn-primary" style="margin-top: 35px; margin-left: 10px; padding-right: 425px; padding-left: 425px">Sign Up</button>
+ </form>
+  </div>
+</div>
+
+{% endblock %}
